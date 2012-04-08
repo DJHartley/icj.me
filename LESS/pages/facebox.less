@@ -1,0 +1,97 @@
+#facebox {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	text-align: left;
+	
+	.popup {
+		position: relative;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		border: 2px dashed #fff;
+		background: #333;
+	}
+	
+	.content {
+		display: table;	
+		width: 450px;
+		background: #333;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		color: #fff;
+		text-shadow: 0px 1px 0px #282828;
+		b {
+			padding-left: 10px;
+		}
+		h2 {
+			text-align: center;
+		}
+		h3 {
+			padding: 10px;
+		}
+		i:first-child {
+			text-align: center;
+		}
+	}
+	
+	.content > p:first-child{
+		margin-top: 0;
+	}
+	.content > p:last-child{
+		margin-bottom: 0;
+	}
+	
+	.close {
+		position: absolute;
+		top: 5px;
+		right: 15px;
+		padding: 2px;
+		background: #333;
+		img {
+			opacity: 0.3;
+		}
+		&:hover img{
+			opacity: 1.0;
+		}
+	}
+	
+	.loading {
+		text-align: center;
+	}
+	
+	.image {
+		text-align: center;
+	}
+	
+	img {
+		border: 0;
+		margin: 0;
+	}
+	
+	a {
+		padding-bottom: 10px;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+#facebox_overlay {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+}
+
+.facebox_hide {
+	z-index: -100;
+}
+
+.facebox_overlayBG {
+	background-color: #000;
+	z-index: 99;
+}

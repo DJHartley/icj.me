@@ -1,0 +1,55 @@
+// file: main.less
+// (c) 2012 Callum Jones <cj@icj.me>
+
+body {
+	// keep the scrollbar there at all times, saves annoying page jump
+	overflow-y: scroll;
+	margin: 0;
+	background: url("@{base-url}assets/images/background.png");
+	font-family: arial, sans serif;
+	// .rotate(180deg);
+}
+
+img, code, pre {
+	border: 0px;
+	max-width: @pagewidth - 40;
+}
+
+::selection, ::-moz-selection {
+	background: @headergrd2; 
+}
+
+a {
+	text-decoration: none;
+	color: @headergrd1 + #001222;
+	outline: none;
+	
+	&:hover { 
+		color: @headergrd1 + #001222 + #001a00; 
+		// text-decoration: underline;
+	}
+}
+
+h1, h2, h3, h4 {
+	font-weight: normal;
+}
+
+ul { 
+	list-style-type: square; 
+	text-align: left;
+}
+
+code {
+	line-height: 24px;
+	padding: 4px;
+	cursor: text;
+	background: rgb(0, 0, 0) transparent; 
+	background: rgba(0, 0, 0, 0.6); 
+}
+
+
+sup {
+	font-variant: small-caps;
+	font-size: 12px;
+	color: yellow;
+}

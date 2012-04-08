@@ -1,0 +1,30 @@
+// file: functions.less
+// (c) 2012 Callum Jones <cj@icj.me>
+
+
+// eg .gradient(top, @headergrd1, 5%, @headergrd2, 64%, @headergrd2, 77%);
+
+.gradient (@orientation, @color1, @percnt1, @color2, @percnt2, @color3, @percnt3) {
+	background-image: linear-gradient(@orientation, @color1 @percnt1, @color2 @percnt2, @color3 @percnt3);
+	background-image: -o-linear-gradient(@orientation, @color1 @percnt1, @color2 @percnt2, @color3 @percnt3);
+	background-image: -moz-linear-gradient(@orientation, @color1 @percnt1, @color2 @percnt2, @color3 @percnt3);
+	background-image: -webkit-linear-gradient(@orientation, @color1 @percnt1, @color2 @percnt2, @color3 @percnt3);
+	background-image: -ms-linear-gradient(@orientation, @color1 @percnt1, @color3 @percnt3);
+}
+
+.ie-compat() {
+	behavior: url('@{base-url}assets/css/compat/PIE.htc');
+}
+
+.text-shadow(@shadowcolor) {
+	// filter: progid:DXImageTransform.Microsoft.DropShadow(OffX=1, OffY=1, Color=@shadowcolor);
+	text-shadow: 0px 1px 0px @shadowcolor;
+}
+
+.rotate(@degrees) {
+
+	-moz-transform: rotate(@degrees);
+	-webkit-transform: rotate(@degrees);
+	-o-transform: rotate(@degrees);
+	-ms-transform: rotate(@degrees);
+}

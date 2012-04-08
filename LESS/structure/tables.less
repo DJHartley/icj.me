@@ -1,0 +1,45 @@
+// file: tables.less
+// (c) 2012 Callum Jones <cj@icj.me>
+
+table {
+	position: relative;
+	margin-top: -20px;
+	margin-bottom: 10px;
+    border-style: hidden;
+	td {
+		width: 386px;
+		padding: 6px;
+		text-align: center;
+		vertical-align: top;
+	}
+	#itunes {
+		border-collapse: collapse;
+		td {
+			border-left: 1px dashed #fff;
+			padding-top: 10px;
+		}
+		tr {
+			border-left: 1px dashed #fff;
+			border-right: 1px dashed #fff;
+			
+			&:nth-child(odd) td{
+				background: rgba(150, 150, 150, 0.6);
+			}
+		}
+		th {
+			border-left: 1px dashed #fff;
+			background: rgb(0, 0, 0) transparent; 
+			background: rgba(0, 0, 0, 0.6);
+			padding-bottom: 5px;
+			padding-top: 5px;
+			font-weight: normal;
+			border-bottom: 1px dashed #fff;
+			&:first-child {
+				border-top-left-radius: 4px;
+			}
+			&:last-child {
+				border-top-right-radius: 4px;
+			}
+		}
+	}	
+}
