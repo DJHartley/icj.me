@@ -2,7 +2,8 @@
 // (c) 2012 Callum Jones <cj@icj.me>
 
 div#header {
-	background-image: url("@{base-url}assets/images/header.png");
+	// fallback for non-modern browsers
+	background-image: url("@{base-url}images/header.png");
 	background-repeat: repeat-x;
 	.gradient(bottom, @headergrd1, 5%, @headergrd2, 64%, @headergrd2, 77%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{headergrd2}', endColorstr='@{headergrd1}');
@@ -27,7 +28,7 @@ div#header {
 
 
 div#navigation {
-	background-image: url("@{base-url}assets/images/topbanner.png");
+	background-image: url("@{base-url}images/topbanner.png");
 	background-repeat: repeat-x;
 	width: 100%;
 	position: fixed; 
