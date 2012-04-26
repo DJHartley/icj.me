@@ -87,10 +87,19 @@ div#container {
 	box-shadow: #000 0 0 10px;
 }
 
+div#container>:first-child:not(article) {
+	text-align: center;
+}
+div#container>:first-child {
+	padding-top: 15px;
+}
 
 @media screen and (max-device-width: 320px), screen and (-webkit-min-device-pixel-ratio: 2) {
 	img {
 		max-width: 80%;
+	}
+	div#container>:first-child {
+		padding-top: 10px;
 	}
 }
 
@@ -146,14 +155,6 @@ div#container {
 	}
 	
 }
-
-div#container>:first-child:not(article) {
-	text-align: center;
-}
-div#container>:first-child {
-	padding-top: 15px;
-}
-
 
 div#certs {
 	float: right;
