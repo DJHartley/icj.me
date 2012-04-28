@@ -69,7 +69,7 @@ div#header {
   padding: 0;
   position: fixed;
   box-shadow: #000 0 0 10px;
-  behavior: url('http://www.icj.me/assets//css/compat/PIE.htc');
+  behavior: url('http://www.icj.me/assets/css/compat/PIE.htc');
   width: 100%;
   z-index: 20;
 }
@@ -117,7 +117,7 @@ img.penguin {
 div#container {
   position: relative;
   top: 127px;
-  behavior: url('http://www.icj.me/assets//css/compat/PIE.htc');
+  behavior: url('http://www.icj.me/assets/css/compat/PIE.htc');
   padding-top: 30px;
   position: relative;
   display: block;
@@ -421,7 +421,7 @@ a.button,
 input#logout,
 input#cancel,
 input#done {
-  behavior: url('http://www.icj.me/assets//css/compat/PIE.htc');
+  behavior: url('http://www.icj.me/assets/css/compat/PIE.htc');
   display: inline-block;
   background: #e39000;
   background-repeat: repeat-x;
@@ -472,7 +472,7 @@ input#logout, input#cancel, input#done {
   color: yellow;
 }
 .ios-button {
-  behavior: url('http://www.icj.me/assets//css/compat/PIE.htc');
+  behavior: url('http://www.icj.me/assets/css/compat/PIE.htc');
   background-image: linear-gradient(bottom, #e39000 5%, #ffc333 64%, #ffc333 77%);
   background-image: -o-linear-gradient(bottom, #e39000 5%, #ffc333 64%, #ffc333 77%);
   background-image: -moz-linear-gradient(bottom, #e39000 5%, #ffc333 64%, #ffc333 77%);
@@ -546,7 +546,7 @@ div#progress {
   text-align: center;
   padding: 10px;
   margin: 0px;
-  behavior: url('http://www.icj.me/assets//css/compat/PIE.htc');
+  behavior: url('http://www.icj.me/assets/css/compat/PIE.htc');
   border-radius: 7px;
   float: right;
   width: 280px;
@@ -569,7 +569,7 @@ div#updatesbox h1, div#updatesbox h2, div#updatesbox h3 {
   text-align: center;
 }
 div#updatesbox ul {
-  behavior: url('http://www.icj.me/assets//css/compat/PIE.htc');
+  behavior: url('http://www.icj.me/assets/css/compat/PIE.htc');
   border-radius: 5px;
   background: #333;
   list-style-type: none;
@@ -735,7 +735,7 @@ span#field {
   display: block;
 }
 #preview h2 {
-  color: orange;
+  color: #e3a222;
   text-align: left;
   padding-left: 5px;
 }
