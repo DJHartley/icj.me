@@ -185,6 +185,8 @@ div#container > :first-child {
   }
   div#navigation a {
     padding: 5px;
+    padding-top: 9px;
+    font-size: 18px;
   }
   img {
     max-width: 80%;
@@ -195,7 +197,7 @@ div#certs {
   width: 85px;
   position: relative;
   right: -5px;
-  top: 32px;
+  top: 47px;
 }
 div#certs img {
   display: block;
