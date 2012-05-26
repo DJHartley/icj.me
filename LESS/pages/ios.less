@@ -50,11 +50,11 @@ a.button, input#logout, input#cancel, input#done   {
 	margin: 7px;
 	border: #000 solid 1px; 
 	padding: 4px;
-	box-shadow: #000 0 0 2px;
+	.shadow(#000, 0px, 0px, 2px);
 	&:hover {
 		.gradient(top, @headergrd1, 5%, @headergrd2, 64%, @headergrd2, 77%);
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{headergrd2}', endColorstr='@{headergrd1}');
-		box-shadow: #000 0 0 3px;
+		.shadow(#000, 0px, 0px, 3px);
 	}
 }
 
@@ -91,12 +91,12 @@ input#logout, input#cancel, input#done {
 	border: #000 solid 1px; 
 	padding-top: 3px;
 	padding-bottom: 2px;
-	box-shadow: #000 0 0 1px;
+	.shadow(#000, 0px, 0px, 2px);
 	cursor: pointer;
 	&:hover {
 		.gradient(top, @headergrd1, 5%, @headergrd2, 64%, @headergrd2, 77%);
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{headergrd2}', endColorstr='@{headergrd1}');
-		box-shadow: #000 0 0 2px;
+		.shadow(#000, 0px, 0px, 3px);
 	}
 }
 
@@ -171,7 +171,7 @@ div#updatesbox {
 		height: 200px;
 		overflow-y: auto;
 		display: block;
-		box-shadow: #000 0 0 5px;
+		.shadow(#000, 0px, 0px, 5px);
 	}
 	p#desc {
 		color: yellow;

@@ -5,7 +5,7 @@ body {
 	// keep the scrollbar there at all times, saves annoying page jump
 	overflow-y: scroll;
 	margin: 0;
-	background: url("@{base-url}images/background.png");
+	background: url("@{base-url}/images/background.png");
 	font-family: arial, sans serif;
 }
 
@@ -22,7 +22,6 @@ a {
 	text-decoration: none;
 	color: @headergrd1 + #001222;
 	outline: none;
-	
 	&:hover { 
 		color: @headergrd1 + #001222 + #001a00; 
 		// text-decoration: underline;
@@ -51,4 +50,25 @@ sup {
 	font-variant: small-caps;
 	font-size: 12px;
 	color: yellow;
+}
+
+span#left {	
+	float: left; 
+	display: inline-block; 
+}
+span#right { 
+	float: right; 
+	display: inline-block; 
+}
+#center { 
+	width: @pagewidth + 40;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center; 
+}
+.clear { 
+	clear: both; 
+}
+.center { 
+	text-align: center; 
 }

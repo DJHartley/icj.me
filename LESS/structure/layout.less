@@ -3,14 +3,14 @@
 
 div#header {
 	// fallback for non-modern browsers
-	background-image: url("@{base-url}images/header.png");
+	background-image: url("@{base-url}/images/header.png");
 	background-repeat: repeat-x;
 	.gradient(bottom, @headergrd1, 5%, @headergrd2, 64%, @headergrd2, 77%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{headergrd2}', endColorstr='@{headergrd1}');
 	height: @headerheight; 
 	padding: 0;
 	position: fixed;
-	box-shadow: #000 0 0 10px;
+	.shadow(#000, 0px, 0px, 10px);
 	.ie-compat();
 	width: 100%;
 	z-index: 20;
@@ -28,7 +28,7 @@ div#header {
 
 
 div#navigation {
-	background-image: url("@{base-url}images/topbanner.png");
+	background-image: url("@{base-url}/images/topbanner.png");
 	background-repeat: repeat-x;
 	width: 100%;
 	position: fixed; 
@@ -39,7 +39,7 @@ div#navigation {
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
-	box-shadow: #000 0 0 12px;
+	.shadow(#000, 0px, 0px, 12px);
 	text-align: center;
 	// border-radius: 0px 0px 6px 6px;
 	a {
@@ -67,24 +67,21 @@ img.penguin {
 }
 
 div#container {
+	.text-shadow(#282828);
+	.shadow(#000, 0px, 0px, 10px);
 	position: relative;
 	top: @headerheight + 35;
-	// text-align: left;
 	.ie-compat();
 	padding-top: 30px;
-	position: relative;
 	display: block;
 	color: #ffffff;
 	width: @pagewidth;
-	.text-shadow(#282828);
-	// min-height: 450px;
 	padding: 20px;
 	background: #636363;
 	margin-left: auto;
 	margin-right: auto;
 	overflow: hidden;
 	border-radius: 6px 6px 6px 6px; 
-	box-shadow: #000 0 0 10px;
 }
 
 div#container>:first-child:not(article) {
