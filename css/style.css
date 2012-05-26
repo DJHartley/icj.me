@@ -56,6 +56,26 @@ sup {
   font-size: 12px;
   color: yellow;
 }
+span#left {
+  float: left;
+  display: inline-block;
+}
+span#right {
+  float: right;
+  display: inline-block;
+}
+#center {
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.clear {
+  clear: both;
+}
+.center {
+  text-align: center;
+}
 div#header {
   background-image: url("http://www.icj.me/assets/images/header.png");
   background-repeat: repeat-x;
@@ -68,7 +88,9 @@ div#header {
   height: 92px;
   padding: 0;
   position: fixed;
-  box-shadow: #000 0 0 10px;
+  -moz-box-shadow: #000000 0px 0px 10px;
+  -webkit-box-shadow: #000000 0px 0px 10px;
+  box-shadow: #000000 0px 0px 10px;
   behavior: url('http://www.icj.me/assets/css/compat/PIE.htc');
   width: 100%;
   z-index: 20;
@@ -87,12 +109,15 @@ div#navigation {
   position: fixed;
   top: 94px;
   height: 51px;
+  filter: progid:dximagetransform.microsoft.dropshadow(OffX=1, OffY=1, colour=#ffffff);
   text-shadow: 0px 1px 0px #ffffff;
   z-index: 5;
   margin-left: auto;
   margin-right: auto;
   display: block;
-  box-shadow: #000 0 0 12px;
+  -moz-box-shadow: #000000 0px 0px 12px;
+  -webkit-box-shadow: #000000 0px 0px 12px;
+  box-shadow: #000000 0px 0px 12px;
   text-align: center;
 }
 div#navigation a {
@@ -115,22 +140,24 @@ img.penguin {
   height: 300px;
 }
 div#container {
+  filter: progid:dximagetransform.microsoft.dropshadow(OffX=1, OffY=1, colour=#ffffff);
+  text-shadow: 0px 1px 0px #282828;
+  -moz-box-shadow: #000000 0px 0px 10px;
+  -webkit-box-shadow: #000000 0px 0px 10px;
+  box-shadow: #000000 0px 0px 10px;
   position: relative;
   top: 127px;
   behavior: url('http://www.icj.me/assets/css/compat/PIE.htc');
   padding-top: 30px;
-  position: relative;
   display: block;
   color: #ffffff;
   width: 860px;
-  text-shadow: 0px 1px 0px #282828;
   padding: 20px;
   background: #636363;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
   border-radius: 6px 6px 6px 6px;
-  box-shadow: #000 0 0 10px;
 }
 div#container > :first-child:not(article) {
   text-align: center;
@@ -245,26 +272,6 @@ div#footer {
     font-weight: bold;
   }
 }
-span#left {
-  float: left;
-  display: inline-block;
-}
-span#right {
-  float: right;
-  display: inline-block;
-}
-#center {
-  width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-.clear {
-  clear: both;
-}
-.center {
-  text-align: center;
-}
 table {
   position: relative;
   margin-top: -20px;
@@ -305,92 +312,6 @@ table #itunes th:first-child {
 }
 table #itunes th:last-child {
   border-top-right-radius: 4px;
-}
-#facebox {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  text-align: left;
-}
-#facebox .popup {
-  position: relative;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  border: 2px dashed #fff;
-  background: #333;
-}
-#facebox .content {
-  display: table;
-  width: 450px;
-  background: #333;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  color: #fff;
-  text-shadow: 0px 1px 0px #282828;
-}
-#facebox .content b {
-  padding-left: 10px;
-}
-#facebox .content h2 {
-  text-align: center;
-}
-#facebox .content h3 {
-  padding: 10px;
-}
-#facebox .content i:first-child {
-  text-align: center;
-}
-#facebox .content > p:first-child {
-  margin-top: 0;
-}
-#facebox .content > p:last-child {
-  margin-bottom: 0;
-}
-#facebox .close {
-  position: absolute;
-  top: 5px;
-  right: 15px;
-  padding: 2px;
-  background: #333;
-}
-#facebox .close img {
-  opacity: 0.3;
-}
-#facebox .close:hover img {
-  opacity: 1.0;
-}
-#facebox .loading {
-  text-align: center;
-}
-#facebox .image {
-  text-align: center;
-}
-#facebox img {
-  border: 0;
-  margin: 0;
-}
-#facebox a {
-  padding-bottom: 10px;
-}
-#facebox a:hover {
-  text-decoration: underline;
-}
-#facebox_overlay {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 100%;
-}
-.facebox_hide {
-  z-index: -100;
-}
-.facebox_overlayBG {
-  background-color: #000;
-  z-index: 99;
 }
 div.list {
   width: 211px;
@@ -435,6 +356,7 @@ input#done {
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffc333', endColorstr='#e39000');
   cursor: pointer;
   color: #000;
+  filter: progid:dximagetransform.microsoft.dropshadow(OffX=1, OffY=1, colour=#ffffff);
   text-shadow: 0px 1px 0px #ffffff;
   line-height: 30px;
   text-align: center;
@@ -445,7 +367,9 @@ input#done {
   margin: 7px;
   border: #000 solid 1px;
   padding: 4px;
-  box-shadow: #000 0 0 2px;
+  -moz-box-shadow: #000000 0px 0px 2px;
+  -webkit-box-shadow: #000000 0px 0px 2px;
+  box-shadow: #000000 0px 0px 2px;
 }
 a.button:hover,
 input#logout:hover,
@@ -457,7 +381,9 @@ input#done:hover {
   background-image: -webkit-linear-gradient(top, #e39000 5%, #ffc333 64%, #ffc333 77%);
   background-image: -ms-linear-gradient(top, #e39000 5%, #ffc333 77%);
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffc333', endColorstr='#e39000');
-  box-shadow: #000 0 0 3px;
+  -moz-box-shadow: #000000 0px 0px 3px;
+  -webkit-box-shadow: #000000 0px 0px 3px;
+  box-shadow: #000000 0px 0px 3px;
 }
 input#logout, input#cancel, input#done {
   line-height: 20px;
@@ -485,6 +411,7 @@ input#logout, input#cancel, input#done {
   text-decoration: none;
   text-align: center;
   color: #000;
+  filter: progid:dximagetransform.microsoft.dropshadow(OffX=1, OffY=1, colour=#ffffff);
   text-shadow: 0px 1px 0px #ffffff;
   width: 162px;
   border-radius: 5px 0px 0px 5px;
@@ -494,7 +421,9 @@ input#logout, input#cancel, input#done {
   border: #000 solid 1px;
   padding-top: 3px;
   padding-bottom: 2px;
-  box-shadow: #000 0 0 1px;
+  -moz-box-shadow: #000000 0px 0px 2px;
+  -webkit-box-shadow: #000000 0px 0px 2px;
+  box-shadow: #000000 0px 0px 2px;
   cursor: pointer;
 }
 .ios-button:hover {
@@ -504,7 +433,9 @@ input#logout, input#cancel, input#done {
   background-image: -webkit-linear-gradient(top, #e39000 5%, #ffc333 64%, #ffc333 77%);
   background-image: -ms-linear-gradient(top, #e39000 5%, #ffc333 77%);
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffc333', endColorstr='#e39000');
-  box-shadow: #000 0 0 2px;
+  -moz-box-shadow: #000000 0px 0px 3px;
+  -webkit-box-shadow: #000000 0px 0px 3px;
+  box-shadow: #000000 0px 0px 3px;
 }
 .ios-button#info {
   border-radius: 0px 5px 5px 0px;
@@ -582,7 +513,9 @@ div#updatesbox ul {
   height: 200px;
   overflow-y: auto;
   display: block;
-  box-shadow: #000 0 0 5px;
+  -moz-box-shadow: #000000 0px 0px 5px;
+  -webkit-box-shadow: #000000 0px 0px 5px;
+  box-shadow: #000000 0px 0px 5px;
 }
 div#updatesbox p#desc {
   color: yellow;
@@ -637,6 +570,31 @@ div#updatesbox[class="portrait"] {
 span#field {
   width: 190px;
   display: inline-block;
+}
+#preview {
+  border-color: #fff;
+  border-style: dashed;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  height: auto;
+  width: auto;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  display: block;
+}
+#preview h2 {
+  color: #e3a222;
+  text-align: left;
+  padding-left: 5px;
+}
+#keepreading {
+  display: block;
+  float: right;
+  font-size: 16px;
+}
+p.description {
+  padding-left: 10px;
 }
 #facebox {
   position: absolute;
@@ -723,29 +681,4 @@ span#field {
 .facebox_overlayBG {
   background-color: #000;
   z-index: 99;
-}
-#preview {
-  border-color: #fff;
-  border-style: dashed;
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
-  height: auto;
-  width: auto;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  display: block;
-}
-#preview h2 {
-  color: #e3a222;
-  text-align: left;
-  padding-left: 5px;
-}
-#keepreading {
-  display: block;
-  float: right;
-  font-size: 16px;
-}
-p.description {
-  padding-left: 10px;
 }

@@ -1,4 +1,2 @@
-layout/
-old\ layout/
-*.txt
-js/
+production.less
+production.css
