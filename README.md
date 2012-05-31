@@ -4,7 +4,7 @@ Some parts of the [Just a Penguin](http://www.icj.me) website.
 
 Mainly LESS, some PHP. LESS built using the SimpLESS compiler.
 
-All images uploaded here are credited to [JaysenHope](http://twitter.com/JaysenHope).
+All images uploaded here are credited to [Jaysen Hope](http://twitter.com/JaysenHope).
 
 # License
 
