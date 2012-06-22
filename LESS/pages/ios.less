@@ -40,13 +40,13 @@ a.button, input#logout, input#cancel, input#done   {
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{headergrd2}', endColorstr='@{headergrd1}');
 	cursor: pointer;
 	color: #000;
-	.text-shadow(#ffffff); 
+	.text-shadow(#fff); 
 	line-height: 30px;
 	text-align: center;
 	width: 180px;
 	height: 30px;
 	border-radius: 5px;
-	font-size: 18px;
+	font-size: 1.2em;
 	margin: 7px;
 	border: #000 solid 1px; 
 	padding: 4px;
@@ -68,21 +68,17 @@ input#logout, input#cancel, input#done {
 	border-bottom: 1px dashed #fff;
 	padding-top: 10px;
 	padding-bottom: 12px;
-	p {
-		font-size: 12px;
-		color: yellow;
-	}
 }
 
 .ios-button {
 	.ie-compat();
 	.gradient(bottom, @headergrd1, 5%, @headergrd2, 64%, @headergrd2, 77%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{headergrd2}', endColorstr='@{headergrd1}');
-	font-size: 18px;
+	font-size: 1.4em;
 	text-decoration: none;
 	text-align: center;	
 	color: #000;
-	.text-shadow(#ffffff); 
+	.text-shadow(#fff); 
 	width: 162px;
 	border-radius: 5px 0px 0px 5px;
 	position: relative;
@@ -115,7 +111,7 @@ input#logout, input#cancel, input#done {
 	text-shadow: none;
 	padding-top: 3px;
 	padding-bottom: 3px;
-	font-size: 18px;
+	font-size: 1.2em;
 	color: #fff;
 	&:hover {
 		.gradient(top, @darkgrd1, 19%, @darkgrd2, 60%, @darkgrd2, 0%);
@@ -153,6 +149,7 @@ div#updatesbox {
 	padding-top: 0px;
 	float: right;
 	padding: 20px;
+	font-size: 1.1em;
 	display: inline-block;
 	// resize: vertical;
 	// max-height: 400px;
@@ -168,7 +165,7 @@ div#updatesbox {
 		padding: 0px;
 		padding-top: 10px;
 		border: 1px dashed #fff;
-		height: 200px;
+		height: 250px;
 		overflow-y: auto;
 		display: block;
 		.shadow(#000, 0px, 0px, 5px);
@@ -177,7 +174,7 @@ div#updatesbox {
 		color: yellow;
 		text-align: center;
 		height: 15px;
-		font-size: 12px;
+		font-size: 0.8em;
 		margin: 1px; 
 	}
 	li {
@@ -225,9 +222,6 @@ div#updatesbox[class="portrait"] {
 @media screen and (max-device-width: 480px), screen and (-webkit-min-device-pixel-ratio: 2) {
 	div#info {
 		width: 530px;
-		ul, p {
-			font-size: 12px;
-		}
 	}
 }
 
