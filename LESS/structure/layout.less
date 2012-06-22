@@ -21,6 +21,7 @@ div#header {
 		position: relative;
 		float: left;
 		left: -2px;
+		// dunno why this works.
 		top: (@headerheight / 2) - 28;
 		z-index: 20;
 	}
@@ -46,7 +47,7 @@ div#navigation {
 		position: relative; 
 		top: 13px;
 		color: #342826; 
-		font-size: 20px;
+		font-size: 1.8em;
 		padding: 7px;
 		&:hover {
 			color: silver; 
@@ -107,10 +108,6 @@ div#container>:first-child {
 	div#header {	
 		position: relative;
 	}
-	// img.logo {
-	//	position: relative;
-	//	left: -10px; 
-	// }
 	div#navigation {
 		position: relative; 
 		top: 2px;
@@ -146,7 +143,7 @@ div#container>:first-child {
 		a {
 			padding: 5px;
 			padding-top: 9px;
-			font-size: 18px;
+			font-size: 1.1em;
 		}
 	}
 	img {
@@ -160,7 +157,7 @@ div#certs {
 	width: 85px;
 	position: relative;
 	right: -5px;
-	top: @headerheight - 45;
+	top: @headerheight - 60;
 	img {
 		display: block;
 		padding-bottom: 2px;
@@ -177,7 +174,7 @@ div#footer {
 	width: @pagewidth;
 	height: 30px;
 	text-align: center;
-	font-size: 12px;
+	font-size: 0.9em;
 	display: block;
 	padding-bottom: 20px;
 	a {
