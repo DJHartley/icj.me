@@ -93,6 +93,7 @@ div#container>:first-child {
 }
 
 @media screen and (max-device-width: 320px), screen and (-webkit-min-device-pixel-ratio: 2) {
+	// iphones in vertical mode
 	img {
 		max-width: 80%;
 	}
@@ -101,7 +102,8 @@ div#container>:first-child {
 	}
 }
 
-@media only screen and (max-height: 768px) {
+@media only screen and (max-height: 768px), screen and (max-device-width: 480px), screen and (-webkit-min-device-pixel-ratio: 2) {
+	// small screens?
 	img {
 		max-width: 95%;
 	}
@@ -212,4 +214,17 @@ div#footer {
 	h1, h2, h3, h4 {
 		font-weight: bold; 
 	}
+}
+
+div#iebanner {
+	// meh.
+	position: fixed;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	top: 0px;
+	z-index: 100;
+	width: 100%;
+	text-align: center;
+	background-color: #000;
+	color: #fff;
 }
