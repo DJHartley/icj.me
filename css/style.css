@@ -91,7 +91,8 @@ div#header {
   -moz-box-shadow: #000000 0px 0px 10px;
   -webkit-box-shadow: #000000 0px 0px 10px;
   box-shadow: #000000 0px 0px 10px;
-  behavior: url('http://www.icj.me/assets/css/compat/PIE.htc');
+  /* filler */
+
   width: 100%;
   z-index: 20;
 }
@@ -147,7 +148,8 @@ div#container {
   box-shadow: #000000 0px 0px 10px;
   position: relative;
   top: 127px;
-  behavior: url('http://www.icj.me/assets/css/compat/PIE.htc');
+  /* filler */
+
   padding-top: 30px;
   display: block;
   color: #ffffff;
@@ -173,7 +175,7 @@ div#container > :first-child {
     padding-top: 10px;
   }
 }
-@media only screen and (max-height: 768px) {
+@media only screen and (max-height: 768px), screen and (max-device-width: 480px), screen and (-webkit-min-device-pixel-ratio: 2) {
   img {
     max-width: 95%;
   }
@@ -276,6 +278,17 @@ div#footer a {
     font-weight: bold;
   }
 }
+div#iebanner {
+  position: fixed;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  top: 0px;
+  z-index: 100;
+  width: 100%;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+}
 table {
   position: relative;
   margin-top: -20px;
@@ -348,7 +361,8 @@ a.button,
 input#logout,
 input#cancel,
 input#done {
-  behavior: url('http://www.icj.me/assets/css/compat/PIE.htc');
+  /* filler */
+
   display: inline-block;
   background: #e39000;
   background-repeat: repeat-x;
@@ -400,7 +414,8 @@ input#logout, input#cancel, input#done {
   padding-bottom: 12px;
 }
 .ios-button {
-  behavior: url('http://www.icj.me/assets/css/compat/PIE.htc');
+  /* filler */
+
   background-image: linear-gradient(bottom, #e39000 5%, #ffc333 64%, #ffc333 77%);
   background-image: -o-linear-gradient(bottom, #e39000 5%, #ffc333 64%, #ffc333 77%);
   background-image: -moz-linear-gradient(bottom, #e39000 5%, #ffc333 64%, #ffc333 77%);
@@ -479,7 +494,8 @@ div#progress {
   text-align: center;
   padding: 10px;
   margin: 0px;
-  behavior: url('http://www.icj.me/assets/css/compat/PIE.htc');
+  /* filler */
+
   border-radius: 7px;
   float: right;
   width: 280px;
@@ -503,7 +519,8 @@ div#updatesbox h1, div#updatesbox h2, div#updatesbox h3 {
   text-align: center;
 }
 div#updatesbox ul {
-  behavior: url('http://www.icj.me/assets/css/compat/PIE.htc');
+  /* filler */
+
   border-radius: 5px;
   background: #333;
   list-style-type: none;
