@@ -3,7 +3,7 @@
 
 div#header {
 	// fallback for non-modern browsers
-	background-image: url("@{base-url}/images/header.png");
+	background-image: url("@{base_url}/images/header.png");
 	background-repeat: repeat-x;
 	.gradient(bottom, @headergrd1, 5%, @headergrd2, 64%, @headergrd2, 77%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{headergrd2}', endColorstr='@{headergrd1}');
@@ -11,7 +11,6 @@ div#header {
 	padding: 0;
 	position: fixed;
 	.shadow(#000, 0px, 0px, 10px);
-	.ie-compat();
 	width: 100%;
 	z-index: 20;
 	// border-radius: 6px 6px 0px 0px;
@@ -20,16 +19,15 @@ div#header {
 	img.logo {
 		position: relative;
 		float: left;
-		left: -2px;
-		// dunno why this works.
-		top: (@headerheight / 2) - 28;
-		z-index: 20;
+		left: -4px;
+		top: 12px;
 	}
+	.ie-compat();
 }
 
 
 div#navigation {
-	background-image: url("@{base-url}/images/topbanner.png");
+	background-image: url("@{base_url}/images/topbanner.png");
 	background-repeat: repeat-x;
 	width: 100%;
 	position: fixed; 
@@ -72,7 +70,6 @@ div#container {
 	.shadow(#000, 0px, 0px, 10px);
 	position: relative;
 	top: @headerheight + 35;
-	.ie-compat();
 	padding-top: 30px;
 	display: block;
 	color: #ffffff;
@@ -83,24 +80,15 @@ div#container {
 	margin-right: auto;
 	overflow: hidden;
 	border-radius: 6px 6px 6px 6px; 
-}
-
-div#container>:first-child:not(article) {
-	text-align: center;
-}
-div#container>:first-child {
-	padding-top: 15px;
-}
-
-@media screen and (max-device-width: 320px), screen and (-webkit-min-device-pixel-ratio: 2) {
-	// iphones in vertical mode
-	img {
-		max-width: 80%;
-	}
-	div#container>:first-child {
-		padding-top: 10px;
+	.ie-compat();
+	&>:first-child {
+		padding-top: 15px;
+		&:not(article) {
+			text-align: center;
+		}
 	}
 }
+
 
 @media only screen and (max-height: 768px), screen and (max-device-width: 480px), screen and (-webkit-min-device-pixel-ratio: 2) {
 	// small screens?
@@ -112,7 +100,7 @@ div#container>:first-child {
 	}
 	div#navigation {
 		position: relative; 
-		top: 2px;
+		top: 1px;
 	}
 	div#container {
 		position: relative;
@@ -125,11 +113,11 @@ div#container>:first-child {
 @media screen and (max-device-width: 480px), screen and (-webkit-min-device-pixel-ratio: 2) {
 	// iPhone / iPod Touch styles
 	body {
-		margin: 8px;
+		margin: 0px;
 	}
 	div#container {
 		position: relative;
-		top: @headerheight - 80;
+		top: @headerheight + 15;
 		padding: 15px;
 		width: auto;
 	}
@@ -138,10 +126,21 @@ div#container>:first-child {
 		padding-left: 20px;
 	}
 	div#header {
-		border-radius: 6px 6px 0px 0px;
+		border-radius: 0px 0px 0px 0px;
+		position: fixed;
+		top: 0px;
+		height: @headerheight - 25;
+		img.logo {
+			position: relative;
+			float: left;
+			left: -10px;
+			top: -1px;
+		}
 	}
 	div#navigation {
-		border-radius: 0px 0px 6px 6px;
+		border-radius: 0px 0px 0px 0px;
+		position: fixed;
+		top: @headerheight - 23;
 		a {
 			padding: 5px;
 			font-size: 1.25em;
@@ -154,12 +153,23 @@ div#container>:first-child {
 	
 }
 
+
+@media screen and (max-device-width: 480px) and (orientation:portrait) {
+	// portrait iphone
+	img {
+		max-width: 80%;
+	}
+	div#container>:first-child {
+		padding-top: 10px;
+	}
+}
+
 div#certs {
 	float: right;
 	width: 85px;
 	position: relative;
 	right: -5px;
-	top: @headerheight - 60;
+	top: @headerheight - 45;
 	img {
 		display: block;
 		padding-bottom: 2px;
@@ -204,9 +214,9 @@ div#footer {
 	// iPhone / iPod Touch styles
 	div#footer {
 		position: relative;
-		top: @headerheight - 60;
+		top: @headerheight + 40;
 		width: 100%;
-		padding: 0px;
+		padding-bottom: 10px;
 	}
 	div#certs { 
 		display: none;
