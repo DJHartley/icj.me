@@ -59,6 +59,27 @@ div#navigation {
 	}
 }
 
+div#subnavigation {
+	position: relative;
+	top: -5px;
+	height: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	width: auto;
+	max-width: @pagewidth - 20;
+	background: rgb(0, 0, 0) transparent; 
+	background: rgba(0, 0, 0, 0.6); 
+	border-radius: 0px 0px 6px 6px;
+	text-align: center;
+	a {
+		padding: 7px;
+		&.current {
+			color: yellow;
+		}
+	}
+
+}
+
 img.penguin {
 	padding-top: 40px;
 	width: 300px;
@@ -83,15 +104,16 @@ div#container {
 	.ie-compat();
 	&>:first-child {
 		padding-top: 15px;
-		&:not(article) {
+		&:not(article):not(#subnavigation) {
 			text-align: center;
 		}
 	}
 }
 
 
-@media only screen and (max-height: 768px), screen and (max-device-width: 480px), screen and (-webkit-min-device-pixel-ratio: 2) {
-	// small screens?
+@media only screen and (max-height: 768px) and (-webkit-max-device-pixel-ratio: 2)  {
+	// screens smaller than 768px tall.
+	// this has caused issues with MBPr (and in some cases still is) - but for the most part should work now.
 	img {
 		max-width: 95%;
 	}
@@ -110,7 +132,7 @@ div#container {
 }
 
 
-@media screen and (max-device-width: 480px), screen and (-webkit-min-device-pixel-ratio: 2) {
+@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
 	// iPhone / iPod Touch styles
 	body {
 		margin: 0px;
@@ -150,17 +172,13 @@ div#container {
 		}
 	}
 	img {
-		max-width: 80%;
+		max-width: 100% !important;
 	}
 	
 }
 
 
 @media screen and (max-device-width: 480px) and (orientation:portrait) {
-	// portrait iphone
-	img {
-		max-width: 80%;
-	}
 	div#container>:first-child {
 		padding-top: 10px;
 	}
@@ -212,7 +230,7 @@ div#footer {
 }
 
 
-@media screen and (max-device-width: 480px), screen and (-webkit-min-device-pixel-ratio: 2) {
+@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
 	// iPhone / iPod Touch styles
 	div#footer {
 		position: relative;
@@ -240,3 +258,4 @@ div#iebanner {
 	background-color: #000;
 	color: #fff;
 }
+

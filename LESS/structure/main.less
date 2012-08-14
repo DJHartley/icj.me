@@ -8,6 +8,8 @@ body {
 	background: url("@{base_url}/images/background.png");
 	font-family: arial, sans serif;
 	font-size: 0.95em;
+	// i hear this fixes issues on ML
+	-webkit-font-smoothing: antialiased; 
 }
 
 img, code, pre {
@@ -38,14 +40,23 @@ ul {
 	text-align: left;
 }
 
-code {
-	line-height: 24px;
-	padding: 4px;
+pre.code {
+	max-width: 90%;
 	cursor: text;
-	background: rgb(0, 0, 0) transparent; 
-	background: rgba(0, 0, 0, 0.6); 
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap !important;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word;
+	border-radius: 5px;
+	color: #fff;
+	padding: 5px;
+	background: #333;
+	border: 1px dashed #fff;
+	overflow: auto;
+	.shadow(#000, 0px, 0px, 5px);
+	.ie-compat();
 }
-
 
 sup {
 	font-variant: small-caps;
@@ -57,19 +68,23 @@ span#left {
 	float: left; 
 	display: inline-block; 
 }
+
 span#right { 
 	float: right; 
 	display: inline-block; 
 }
+
 #center { 
 	width: @pagewidth + 40;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center; 
 }
+
 .clear { 
 	clear: both; 
 }
+
 .center { 
 	text-align: center; 
 }

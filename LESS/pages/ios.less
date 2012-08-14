@@ -18,7 +18,7 @@ div.list {
 	}
 }
 
-@media screen and (max-device-width: 480px), screen and (-webkit-min-device-pixel-ratio: 2) {
+@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
 	// iPhone / iPod Touch styles
 	div.list {
 		width: 49%;
@@ -127,7 +127,9 @@ select {
 }
 
 div#progress {
-	display: none;	background: rgb(0, 0, 0) transparent; background: rgba(0, 0, 0, 0.6); 
+	display: none;
+	background: rgb(0, 0, 0) transparent; 
+	background: rgba(0, 0, 0, 0.6); 
 	text-align: center;
 	padding: 10px;
 	margin: 0px;
@@ -219,7 +221,7 @@ div#updatesbox[class="portrait"] {
 	display: none;
 }
 
-@media screen and (max-device-width: 480px), screen and (-webkit-min-device-pixel-ratio: 2) {
+@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
 	div#info {
 		width: 530px;
 	}
