@@ -30,7 +30,6 @@ div.list {
 
 
 a.button, input#logout, input#cancel, input#done   {
-	.ie-compat();
 	display: inline-block;
 	background: rgb(227,144,0);
 	background-repeat: repeat-x;
@@ -54,6 +53,7 @@ a.button, input#logout, input#cancel, input#done   {
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{headergrd2}', endColorstr='@{headergrd1}');
 		.shadow(#000, 0px, 0px, 3px);
 	}
+	.ie-compat();
 }
 
 input#logout, input#cancel, input#done {
@@ -69,7 +69,6 @@ input#logout, input#cancel, input#done {
 }
 
 .ios-button {
-	.ie-compat();
 	.gradient(bottom, @headergrd1, 5%, @headergrd2, 64%, @headergrd2, 77%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{headergrd2}', endColorstr='@{headergrd1}');
 	font-size: 1.2em;
@@ -78,11 +77,13 @@ input#logout, input#cancel, input#done {
 	color: #000;
 	.text-shadow(#fff); 
 	width: 162px;
+	height: 30px;
 	border-radius: 5px 0px 0px 5px;
 	position: relative;
 	display: inline-block;
 	left: 2px;
 	border: #000 solid 1px; 
+	margin-top: 12px;
 	padding-top: 3px;
 	padding-bottom: 2px;
 	.shadow(#000, 0px, 0px, 2px);
@@ -92,6 +93,7 @@ input#logout, input#cancel, input#done {
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{headergrd2}', endColorstr='@{headergrd1}');
 		.shadow(#000, 0px, 0px, 3px);
 	}
+	.ie-compat();
 }
 
 .ios-button#info {
@@ -152,7 +154,7 @@ div#updatesbox {
 	display: inline-block;
 	// resize: vertical;
 	// max-height: 400px;
-	h1,h2,h3 {
+	h1, h2, h3 {
 		text-align: center;
 	}
 	ul {
@@ -215,7 +217,6 @@ div#info {
 		
 	} 	
 }
-
 
 @media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-device-width: 480px) {
 	div#info {
