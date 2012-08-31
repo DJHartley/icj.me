@@ -94,35 +94,37 @@ input#logout, input#cancel, input#done {
 		.shadow(#000, 0px, 0px, 3px);
 	}
 	.ie-compat();
-}
-
-.ios-button#info {
-	border-radius: 0px 5px 5px 0px;
-	font-family:"Times New Roman", Times, serif;
-	background: rgb(0,0,0);
-	background-repeat: repeat-x;
-	.gradient(bottom, @darkgrd1, 19%, @darkgrd2, 60%, @darkgrd2, 0%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{darkgrd2}', endColorstr='@{darkgrd1}');
-	display: inline-block;
-	width: 22px;
-	vertical-align: top;
-	text-decoration: none;
-	font-style: italic;
-	text-shadow: none;
-	padding-top: 3px;
-	padding-bottom: 3px;
-	font-size: 1.2em;
-	color: #fff;
-	&:hover {
-		.gradient(top, @darkgrd1, 19%, @darkgrd2, 60%, @darkgrd2, 0%);
+	// the info button too!
+	&.info {
+		border-radius: 0px 5px 5px 0px;
+		font-family:"Times New Roman", Times, serif;
+		background: rgb(0,0,0);
+		background-repeat: repeat-x;
+		.gradient(bottom, @darkgrd1, 19%, @darkgrd2, 60%, @darkgrd2, 0%);
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{darkgrd2}', endColorstr='@{darkgrd1}');
+		display: inline-block;
+		width: 22px;
+		vertical-align: top;
+		text-decoration: none;
+		font-style: italic;
+		text-shadow: none;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		font-size: 1.2em;
+		color: #fff;
+		&:hover {
+			.gradient(top, @darkgrd1, 19%, @darkgrd2, 60%, @darkgrd2, 0%);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{darkgrd2}', endColorstr='@{darkgrd1}');
+		}
 	}
 }
 
 select {
-	width: 184px;
+	width: 182px;
 	position: relative;
-	margin-left: 4px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
 }
 
 div#progress {
@@ -132,7 +134,6 @@ div#progress {
 	text-align: center;
 	padding: 10px;
 	margin: 0px;
-	.ie-compat();
 	border-radius: 7px;
 	float: right;
 	width: 280px;
@@ -142,6 +143,7 @@ div#progress {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: -110px;
+	.ie-compat();
 }
 
 div#updatesbox {
