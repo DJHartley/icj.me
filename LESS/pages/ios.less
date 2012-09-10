@@ -127,8 +127,27 @@ input#logout, input#cancel, input#done {
 			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{darkgrd2}', endColorstr='@{darkgrd1}');
 		}
 	}
+	&.error {
+		.gradient(bottom, rgb(243,82,46), 45%, rgb(255,115,74), 73%, darken(rgb(255,150,104), 5%), 87%);
+		&:hover {
+			.gradient(top, rgb(243,82,46), 45%, rgb(255,115,74), 73%, darken(rgb(255,150,104), 5%), 87%);
+		}
+	}
+	&.processing {
+		.gradient(bottom, rgb(55,133,158), 3%, rgb(83,160,190), 61%, rgb(83,160,190), 61%);
+		&:hover {
+			.gradient(top, rgb(55,133,158), 3%, rgb(83,160,190), 61%, rgb(83,160,190), 61%);
+		}
+	}
 }
 
+// target only firefox
+@-moz-document url-prefix() {
+	.ios-button {
+		padding-bottom: 3px;
+		padding-top: 1px;
+	}
+}
 
 div#progress {
 	display: none;
@@ -226,6 +245,11 @@ div#info {
 @media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-device-width: 480px) {
 	div#info {
 		width: 530px;
+	}
+	.ios-button {
+		&.error {
+			font-size: 0.9em;
+		}
 	}
 }
 
