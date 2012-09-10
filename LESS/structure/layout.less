@@ -25,6 +25,10 @@ div#header {
 	.ie-compat();
 }
 
+// target only firefox
+@-moz-document url-prefix() {
+	box-shadow: none;
+}
 
 div#navigation {
 	// fallback!
@@ -194,7 +198,7 @@ div#container {
 		padding-top: 10px;
 	}
 }
-
+/*
 div#certs {
 	float: right;
 	width: 85px;
@@ -206,37 +210,19 @@ div#certs {
 		padding-bottom: 2px;
 	}
 }
-
+*/
 
 div#footer {
-	margin-left: auto;
-	margin-right: auto;
-	display: none; 
-	color: white;
 	clear: both;
-	width: @pagewidth;
-	height: 30px;
+	top: 140px;
+	position: relative;
+	bottom: 0px;
+	color: white;
 	text-align: center;
 	font-size: 0.82em;
-	display: block;
-	padding-bottom: 20px;
 	a {
 		padding-left: 5px;
 		padding-right: 5px;
-	}
-}
-
-@media only screen and (max-height: 768px) {
-	div#footer { 
-		position: relative;
-		top: @headerheight - 80;
-	}
-}
-
-@media only screen and (min-height: 768px) {
-	div#footer { 
-		position: relative;
-		top: @headerheight + 60;
 	}
 }
 
@@ -257,7 +243,7 @@ div#footer {
 }
 
 div#iebanner {
-	// meh.
+	display: none;
 	position: fixed;
 	padding-top: 5px;
 	padding-bottom: 5px;
