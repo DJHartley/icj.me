@@ -20,7 +20,7 @@
 .text-shadow(@shadowcolour) {
 	// IE, meh
 	// filter: progid:DXImageTransform.Microsoft.DropShadow(OffX=1, OffY=1, colour=@shadowcolour);
-	filter: glow(color=@shadowcolour,strength=1), alpha(opacity=70);
+	// filter: glow(color=@shadowcolour,strength=1), alpha(opacity=70);
 	text-shadow: 0px 1px 0px @shadowcolour;
 }
 
