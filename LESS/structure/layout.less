@@ -108,6 +108,7 @@ div#container {
 	color: #ffffff;
 	width: @pagewidth;
 	padding: 20px;
+	min-height: 400px;
 	background: #636363;
 	margin-left: auto;
 	margin-right: auto;
@@ -156,6 +157,7 @@ div#container {
 		width: auto;
 		margin-right: 8px;
 		margin-left: 8px;
+		min-height: 0px;
 	}
 	img.logo {
 		position: relative;
@@ -214,15 +216,26 @@ div#certs {
 
 div#footer {
 	clear: both;
-	top: 140px;
+	top: 130px;
 	position: relative;
 	bottom: 0px;
 	color: white;
 	text-align: center;
 	font-size: 0.82em;
+	height: 50px;
 	a {
 		padding-left: 5px;
 		padding-right: 5px;
+	}
+}
+
+@media only screen and (max-height: 768px) and (-webkit-max-device-pixel-ratio: 2)  {
+	// screens smaller than 768px tall.
+	// this has caused issues with MBPr (and in some cases still is) - but for the most part should work now.
+	div#footer {
+		position: relative;
+		// :o bad cj
+		top: -10px;
 	}
 }
 
@@ -230,7 +243,7 @@ div#footer {
 	// iPhone / iPod Touch styles
 	div#footer {
 		position: relative;
-		top: @headerheight + 40;
+		top: @headerheight + 30;
 		width: 100%;
 		height: 25px;
 	}
