@@ -151,7 +151,10 @@ div#container {
 	// iPhone / iPod Touch styles
 	body {
 		margin: 0px;
+		min-height:540px;
 	}
+	body[class="portrait"] { min-height: 800px; }
+	body[class="landscape"] { min-height:400px; }
 	div#container {
 		position: relative;
 		top: @headerheight + 15;
@@ -258,7 +261,6 @@ div#footer {
 }
 
 div#iebanner {
-	display: none;
 	position: fixed;
 	padding-top: 5px;
 	padding-bottom: 5px;

@@ -211,31 +211,44 @@ div#updatesbox {
 		border-bottom: 1px dashed #fff;
 	}
 
-	&[class="landscape"] {
-		display: inline-block;
-		float: right;
-		text-align: center;
-		width: 280px;
-		ul {
-			margin-left: auto;
-			margin-right: auto;
-			width: 280px;
-			height: 300px;
-			display: block;
-		}
-	}
-	&[class="portrait"] {
+}
+
+
+@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-device-width: 480px) {
+	// iPhone / iPod Touch styles
+	div#updatesbox {
 		display: none;
 	}
+
+	body[class="landscape"] {
+		
+		div#updatesbox {
+			display: inline-block;
+			float: right;
+			text-align: center;
+			width: 280px;
+			ul {
+				margin-left: auto;
+				margin-right: auto;
+				width: 280px;
+				height: 380px;
+				display: block;
+			}
+		}
+	}
 }
+	
+
 
 div#info {
 	width: 540px;
 	padding-top: 20px;
 	float: left; 
+	
 	display: inline-block;
 	h1,h2,h3 {
 		text-align: center;
+		
 	}
 	a.button {
 		height: 20px;
@@ -247,6 +260,10 @@ div#info {
 @media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-device-width: 480px) {
 	div#info {
 		width: 530px;
+		font-size: 0.8em;
+		h1, h2, h3 {
+			font-size: 2.2em;
+		}
 	}
 	.ios-button {
 		&.error {
