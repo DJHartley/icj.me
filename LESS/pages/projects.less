@@ -1,0 +1,65 @@
+// file: ios.less
+// (c) 2012 Callum Jones <cj@icj.me>
+// Licensed under under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. 
+// See the README.md for more information
+
+div#wrap {
+	width: 850px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.projecttile {
+	width: 49%;
+	height: 338px;
+	border: 1px dotted #282828;
+	border-radius: 4px;
+	display: inline-block;
+	padding: 0px;
+	vertical-align: top;
+	text-align: center;
+	color: #676767;
+	&:hover {
+		border: 1px solid #282828;
+		cursor: pointer;
+		box-shadow: #282828  0px 0px 10px;
+	}
+
+	h2 {
+		text-align: center;
+	}
+
+	img {
+		width: 400px;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 4px;
+	}
+
+	a.nostyle {
+		color: #fff;
+		&:hover {
+			color: #fff;
+		}
+	}
+}
+
+@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-device-width: 480px) {
+	// iPhone / iPod Touch styles
+	
+	div#wrap {
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	
+	div.projecttile {
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		margin-bottom: 20px;
+		float: left !important;
+	}
+}
