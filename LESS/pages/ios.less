@@ -188,7 +188,7 @@ div#progress {
 }
 
 div#updatesbox {
-	width: 260px;
+	width: 280px;
 	color: #fff;
 	padding-top: 0px;
 	float: right;
@@ -200,7 +200,7 @@ div#updatesbox {
 	h1, h2, h3 {
 		text-align: center;
 	}
-	ul {
+	ul.updates {
 		.ie-compat();
 		border-radius: 5px;
 		background: #333;
@@ -209,22 +209,37 @@ div#updatesbox {
 		padding: 0px;
 		padding-top: 10px;
 		border: 1px dashed #fff;
-		height: 230px;
+		height: 320px;
 		overflow-y: auto;
 		display: block;
 		.shadow(#000, 0px, 0px, 5px);
+		li {
+			padding-bottom: 10px;
+			padding-top: 10px;
+			padding-left: 5px;
+			border-bottom: 1px dashed #fff;
+		}
 	}
+	
+	ul.moreinfo {
+		list-style-type: square;
+		font-size: 0.8em;
+		
+		li {
+			border-bottom: none;
+			padding: 2px;
+			color: white;
+			i {
+				color: yellow;
+			}
+		}
+	}
+	
 	p.desc {
 		color: yellow;
 		text-align: center;
 		font-size: 0.8em;
 		margin: 1px; 
-	}
-	li {
-		padding-bottom: 10px;
-		padding-top: 10px;
-		padding-left: 5px;
-		border-bottom: 1px dashed #fff;
 	}
 
 }
