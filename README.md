@@ -1,4 +1,4 @@
-# About
+# The Just a Penguin Website!
 
 Some parts of the [Just a Penguin](http://www.icj.me) website.
 
