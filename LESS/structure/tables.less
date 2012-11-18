@@ -44,4 +44,47 @@ table {
 			}
 		}
 	}
+	
+	// by version table
+	&.firmwares {
+		margin-top: 10px;
+		border-collapse: collapse;
+		padding: 2px;
+		// width: 840px;
+		margin-left: auto;
+		margin-right: auto;
+		// box-shadow: #2E2E2E 0px 0px 8px;
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		
+		th {
+			border-left: 1px solid #fff;
+			background: rgb(0, 0, 0) transparent; 
+			background: rgba(0, 0, 0, 0.6);
+			padding-bottom: 5px;
+			padding-top: 5px;
+			font-weight: bold;
+			border-bottom: 1px solid #fff;
+			&:first-child {
+				border-top-left-radius: 4px;
+			}
+
+			&:last-child {
+				border-top-right-radius: 4px;
+			}
+		}
+		
+		tr {
+			border-left: 1px dashed #fff;
+			border-right: 1px dashed #fff;
+			&:nth-child(odd) td {
+				background: rgba(150, 150, 150, 0.5);
+			}
+		}
+		
+		td {
+			border: 1px solid #fff;
+			vertical-align: middle;
+		}
+	}
 }
