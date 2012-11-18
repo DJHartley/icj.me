@@ -12,9 +12,10 @@ div#header {
 	height: @headerheight; 
 	padding: 0;
 	position: fixed;
-	.shadow(#000, 0px, 0px, 10px);
+	//.shadow(#000, 0px, 0px, 10px);
 	width: 100%;
 	z-index: 20;
+	border-bottom: 2px solid #000;
 	// border-radius: 6px 6px 0px 0px;
 	// border-top-right-radius: 6px;
 	// border-top-left-radius: 6px;
@@ -57,6 +58,10 @@ div#navigation {
 		color: #342826; 
 		font-size: 1.32em;
 		padding: 7px;
+		text-decoration: none;
+		-webkit-transition-property: color;
+		-webkit-transition-duration: 0.2s;
+		-webkit-transition-timing-function: ease-in;
 		&:hover {
 			color: silver; 
 			text-decoration: none;
@@ -101,7 +106,7 @@ img.penguin {
 }
 
 div#container {
-	.text-shadow(#282828);
+	.text-shadow(lighten(#282828, 10%));
 	.shadow(#000, 0px, 0px, 10px);
 	position: relative;
 	top: @headerheight + 35;
@@ -153,8 +158,10 @@ div#container {
 		margin: 0px;
 		min-height:540px;
 	}
+	
+	// min-heights for autopush to remove safari navbar :)
 	body[class="portrait"] { min-height: 800px; }
-	body[class="landscape"] { min-height:400px; }
+	body[class="landscape"] { min-height: 400px; }
 	div#container {
 		position: relative;
 		top: @headerheight + 15;
