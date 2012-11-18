@@ -53,6 +53,9 @@ a.button, input#logout, input#cancel, input#done   {
 	border: #000 solid 1px; 
 	padding: 4px;
 	.shadow(#000, 0px, 0px, 2px);
+	-webkit-transition-property: linear-gradient, -o-linear-gradient, -moz-linear-gradient, -webkit-linear-gradient, -ms-linear-gradient;
+	-webkit-transition-duration: 2s, 2s, 2s, 2s, 2s;
+	-webkit-transition-timing-function: ease-in, ease-in, ease-in, ease-in, ease-in;
 	&:hover {
 		.gradient(top, @headergrd1, 5%, @headergrd2, 64%, @headergrd2, 77%);
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{headergrd2}', endColorstr='@{headergrd1}');
@@ -95,6 +98,12 @@ input.smallbutton {
 		margin-right: auto;
 		display: block;
 	}
+	h3 a {
+		color: white;
+		&:hover {
+			text-decoration: underline;
+		}
+	} 
 }
 
 .ios-button {
@@ -117,6 +126,9 @@ input.smallbutton {
 	padding-bottom: 2px;
 	.shadow(#000, 0px, 0px, 2px);
 	cursor: pointer;
+	-webkit-transition-property: linear-gradient, -o-linear-gradient, -moz-linear-gradient, -webkit-linear-gradient, -ms-linear-gradient;
+	-webkit-transition-duration: 2s, 2s, 2s, 2s, 2s;
+	-webkit-transition-timing-function: ease-in, ease-in, ease-in, ease-in, ease-in;
 	&:hover {
 		.gradient(top, @headergrd1, 5%, @headergrd2, 64%, @headergrd2, 77%);
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{headergrd2}', endColorstr='@{headergrd1}');
@@ -247,10 +259,15 @@ div#updatesbox {
 
 @media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-device-width: 480px) {
 	// iPhone / iPod Touch styles
-	div#updatesbox {
-		display: none;
+	body[class="portrait"] {
+		div#updatesbox {
+			float: none;
+			display: block;
+			width: 84%;
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
-
 	body[class="landscape"] {
 		
 		div#updatesbox {
@@ -264,6 +281,11 @@ div#updatesbox {
 				width: 280px;
 				height: 380px;
 				display: block;
+			}
+			
+			ul.moreinfo {
+				width: auto;
+				height: auto;
 			}
 		}
 	}
@@ -289,11 +311,19 @@ div#info {
 }
 
 @media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-device-width: 480px) {
-	div#info {
-		width: 530px;
-		font-size: 0.8em;
-		h1, h2, h3 {
-			font-size: 2.2em;
+	body[class="portrait"] {
+		div#info {
+			width: 100%;
+			display: block;
+		}
+	}
+	body[class="landscape"] {
+		div#info {
+			width: 530px;
+			font-size: 0.8em;
+			h1, h2, h3 {
+				font-size: 2.2em;
+			}
 		}
 	}
 	.ios-button {
