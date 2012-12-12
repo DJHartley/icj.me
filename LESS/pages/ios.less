@@ -1,7 +1,9 @@
-// file: ios.less
-// (c) 2012 Callum Jones <cj@icj.me>
-// Licensed under under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. 
-// See the README.md for more information
+/*
+ * Just a Penguin Website by Callum Jones <cj@icj.me>
+ * ios.less
+ * Licensed under under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+ * See the README.md for more information
+ */
 
 div.list {
 	width: 211px;
@@ -47,15 +49,15 @@ a.button, input#logout, input#cancel, input#done   {
 	text-align: center;
 	width: 180px;
 	height: 30px;
-	border-radius: 5px;
+	border-radius: 3px;
 	font-size: 1.2em;
 	margin: 7px;
 	border: #000 solid 1px; 
 	padding: 4px;
 	.shadow(#000, 0px, 0px, 2px);
-	-webkit-transition-property: linear-gradient, -o-linear-gradient, -moz-linear-gradient, -webkit-linear-gradient, -ms-linear-gradient;
+	/*-webkit-transition-property: linear-gradient, -o-linear-gradient, -moz-linear-gradient, -webkit-linear-gradient, -ms-linear-gradient;
 	-webkit-transition-duration: 2s, 2s, 2s, 2s, 2s;
-	-webkit-transition-timing-function: ease-in, ease-in, ease-in, ease-in, ease-in;
+	-webkit-transition-timing-function: ease-in, ease-in, ease-in, ease-in, ease-in;*/
 	&:hover {
 		.gradient(top, @headergrd1, 5%, @headergrd2, 64%, @headergrd2, 77%);
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{headergrd2}', endColorstr='@{headergrd1}');
@@ -82,7 +84,7 @@ input.smallbutton {
 	padding-left: 4px;
 	padding-right: 4px;
 	font-size: 0.9em;
-	border-radius: 5px 5px 5px 5px;
+	border-radius: 3px 3px 3px 3px;
 }
 
 #ios-content {
@@ -116,7 +118,7 @@ input.smallbutton {
 	.text-shadow(#fff); 
 	width: 162px;
 	height: 30px;
-	border-radius: 5px 0px 0px 5px;
+	border-radius: 3px 0px 0px 3px;
 	position: relative;
 	display: inline-block;
 	left: 0px;
@@ -126,9 +128,9 @@ input.smallbutton {
 	padding-bottom: 2px;
 	.shadow(#000, 0px, 0px, 2px);
 	cursor: pointer;
-	-webkit-transition-property: linear-gradient, -o-linear-gradient, -moz-linear-gradient, -webkit-linear-gradient, -ms-linear-gradient;
+	/* -webkit-transition-property: linear-gradient, -o-linear-gradient, -moz-linear-gradient, -webkit-linear-gradient, -ms-linear-gradient;
 	-webkit-transition-duration: 2s, 2s, 2s, 2s, 2s;
-	-webkit-transition-timing-function: ease-in, ease-in, ease-in, ease-in, ease-in;
+	-webkit-transition-timing-function: ease-in, ease-in, ease-in, ease-in, ease-in; */
 	&:hover {
 		.gradient(top, @headergrd1, 5%, @headergrd2, 64%, @headergrd2, 77%);
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{headergrd2}', endColorstr='@{headergrd1}');
@@ -137,7 +139,7 @@ input.smallbutton {
 	.ie-compat();
 	// the info button too!
 	&.info {
-		border-radius: 0px 5px 5px 0px;
+		border-radius: 0px 3px 3px 0px;
 		font-family: "Times New Roman", Times, serif;
 		background: rgb(0,0,0);
 		background-repeat: repeat-x;
@@ -174,6 +176,7 @@ input.smallbutton {
 
 // target only firefox
 @-moz-document url-prefix() {
+	// fix odd alignment of buttons
 	.ios-button {
 		padding-bottom: 3px;
 		padding-top: 1px;
@@ -214,7 +217,7 @@ div#updatesbox {
 	}
 	ul.updates {
 		.ie-compat();
-		border-radius: 5px;
+		border-radius: 3px;
 		background: #333;
 		list-style-type: none;
 		margin: 0px;
@@ -254,6 +257,12 @@ div#updatesbox {
 		margin: 1px; 
 	}
 
+}
+
+table#ios {
+	border-top: 1px dashed #fff;
+	margin-top: 10px;
+	width: 100%;
 }
 
 

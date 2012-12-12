@@ -1,18 +1,18 @@
-// Functions.less
-// some generic functions for LESS
-// (c) 2012 Callum Jones <cj@icj.me>
-// Licensed under under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. 
-// See the README.md for more information
-
+/*
+ * Just a Penguin Website by Callum Jones <cj@icj.me>
+ * functions.less
+ * Licensed under under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+ * See the README.md for more information
+ */
 
 // eg .gradient(top, @headergrd1, 5%, @headergrd2, 64%, @headergrd2, 77%);
 
 .gradient (@orientation, @colour1, @percnt1, @colour2, @percnt2, @colour3, @percnt3) {
-	background-image: linear-gradient(@orientation, @colour1 @percnt1, @colour2 @percnt2, @colour3 @percnt3);
-	background-image: -o-linear-gradient(@orientation, @colour1 @percnt1, @colour2 @percnt2, @colour3 @percnt3);
-	background-image: -moz-linear-gradient(@orientation, @colour1 @percnt1, @colour2 @percnt2, @colour3 @percnt3);
+	background-image:         linear-gradient(@orientation, @colour1 @percnt1, @colour2 @percnt2, @colour3 @percnt3);
+	background-image:      -o-linear-gradient(@orientation, @colour1 @percnt1, @colour2 @percnt2, @colour3 @percnt3);
+	background-image:    -moz-linear-gradient(@orientation, @colour1 @percnt1, @colour2 @percnt2, @colour3 @percnt3);
 	background-image: -webkit-linear-gradient(@orientation, @colour1 @percnt1, @colour2 @percnt2, @colour3 @percnt3);
-	background-image: -ms-linear-gradient(@orientation, @colour1 @percnt1, @colour3 @percnt3);
+	background-image:     -ms-linear-gradient(@orientation, @colour1 @percnt1, @colour3 @percnt3);
 }
 
 .ie-compat() {
@@ -27,15 +27,15 @@
 }
 
 .rotate(@degrees) {
-	-moz-transform: rotate(@degrees);
+	   -moz-transform: rotate(@degrees);
 	-webkit-transform: rotate(@degrees);
-	-o-transform: rotate(@degrees);
-	-ms-transform: rotate(@degrees);
+	     -o-transform: rotate(@degrees);
+	    -ms-transform: rotate(@degrees);
 }
 
 .shadow(@pixels, @pixels1, @pixels2, @colour) {
-	-moz-box-shadow: @pixels @pixels1 @pixels2 @colour;
+	   -moz-box-shadow: @pixels @pixels1 @pixels2 @colour;
 	-webkit-box-shadow: @pixels @pixels1 @pixels2 @colour;
-	box-shadow: @pixels @pixels1 @pixels2 @colour;
+	        box-shadow: @pixels @pixels1 @pixels2 @colour;
 }
 
