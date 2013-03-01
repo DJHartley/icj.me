@@ -22,8 +22,38 @@ div.list {
 	}
 }
 
+div.notification, p.notification {
+	display: block;
+	border: 1px dashed #fff;
+	color: magenta;
+	text-shadow: none;
+	min-width: 450px;
+	.shadow(#000, 0px, 0px, 5px);
+	max-width: 860px;
+	padding: 5px;
+	background: #000;
+	border-radius: 2px;
+
+	a {
+		color: white;
+		&:hover {
+			color: white;
+			text-decoration: underline;
+		}
+	}
+	
+	b {
+		color: #fff;
+	}
+}
+
 @media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-device-width: 480px) {
 	// iPhone / iPod Touch styles
+	
+	p.notification {
+		width: auto;
+	}
+	
 	div.list {
 		width: 49%;
 		input {
@@ -75,6 +105,8 @@ input.dark {
 	background: rgb(0, 0, 0) transparent; 
 	background: rgba(0, 0, 0, 0.6); 
 	border: 1px dashed #fff;
+	padding-left: 2px;
+	padding-right: 2px;
 }
 
 input.smallbutton {
@@ -161,6 +193,7 @@ input.smallbutton {
 		}
 	}
 	&.error {
+		font-size: 1.15em;
 		.gradient(bottom, rgb(243,82,46), 45%, rgb(255,115,74), 73%, darken(rgb(255,150,104), 5%), 87%);
 		&:hover {
 			.gradient(top, rgb(243,82,46), 45%, rgb(255,115,74), 73%, darken(rgb(255,150,104), 5%), 87%);
@@ -236,6 +269,35 @@ div#updatesbox {
 		}
 	}
 	
+	ul.item {
+		list-style-type: square;
+		text-align: left;
+		padding-left: 20px;
+		li {
+			padding-bottom: 0px;
+			padding-top: 0px;
+			padding-left: 0px;
+			border-bottom: none;
+		}
+	}
+	
+	span.date {
+		float: right;
+		padding-right: 4px;
+		font-weight: bold;
+		padding-top: 2px;
+		width: 65px;
+		background: lighten(#333, 6%);
+		border: 1px dashed #fff;
+		border-right: none;
+		.shadow(#000, 0px, 0px, 2px);
+		padding-left: 2px;
+		display: inline-block;
+		position: relative;
+		margin-top: -5px;
+		border-radius: 0px 2px 2px 0px;	
+	}
+	
 	ul.moreinfo {
 		list-style-type: square;
 		font-size: 0.8em;
@@ -252,12 +314,40 @@ div#updatesbox {
 	
 	p.desc {
 		color: yellow;
-		text-align: center;
+		text-align: left;
 		font-size: 0.8em;
+		padding-left: 20px;
 		margin: 1px; 
 	}
 
 }
+
+@media only screen and (min-width: 1150px) and (-webkit-max-device-pixel-ratio: 2)  {
+	div#updatesbox {
+		width: 400px;
+	}
+}
+
+
+
+// iPad (retina and non retina)
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px), 
+only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5) {
+
+	#ios-content {
+		select {
+			width: 201px;
+		}
+	}
+	.ios-button {
+		&.error {
+			font-size: 1.15em;
+		}
+	}
+}
+
+
 
 table#ios {
 	border-top: 1px dashed #fff;
@@ -268,16 +358,16 @@ table#ios {
 
 @media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-device-width: 480px) {
 	// iPhone / iPod Touch styles
-	body[class="portrait"] {
-		div#updatesbox {
-			float: none;
-			display: block;
-			width: 84%;
-			margin-left: auto;
-			margin-right: auto;
-		}
+	
+	div#updatesbox {
+		float: none;
+		display: block;
+		width: 84%;
+		margin-left: auto;
+		margin-right: auto;
 	}
-	body[class="landscape"] {
+	
+	/*body[class="landscape"] {
 		
 		div#updatesbox {
 			display: inline-block;
@@ -297,7 +387,7 @@ table#ios {
 				height: auto;
 			}
 		}
-	}
+	}*/
 }
 	
 
@@ -319,22 +409,26 @@ div#info {
 	} 	
 }
 
+
+@media only screen and (min-width: 1150px) and (-webkit-max-device-pixel-ratio: 2)  {
+	// wide screens!
+	div#info {
+		width: 635px;
+	}
+}
+
 @media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-device-width: 480px) {
-	body[class="portrait"] {
-		div#info {
-			width: 100%;
-			display: block;
+
+	div#info {
+		width: 100%;
+		display: block;
+		
+		h2 {
+			font-size: 2.0em;
 		}
+		
 	}
-	body[class="landscape"] {
-		div#info {
-			width: 530px;
-			font-size: 0.8em;
-			h1, h2, h3 {
-				font-size: 2.2em;
-			}
-		}
-	}
+
 	.ios-button {
 		&.error {
 			font-size: 0.9em;

@@ -75,11 +75,14 @@ div#navigation {
 
 div#subnavigation {
 	position: relative;
-	top: -5px;
-	height: 30px;
+	top: -10px;
+	padding-top: 0px !important;
 	margin-left: auto;
 	margin-right: auto;
-	width: auto;
+	
+	height: 40px;
+	width: 95%;
+
 	max-width: @pagewidth - 20;
 	background: rgb(0, 0, 0) transparent; 
 	background: rgba(0, 0, 0, 0.6); 
@@ -95,10 +98,25 @@ div#subnavigation {
 	}
 	span#twitter {
 		float: right;
+		padding-top: 14px;
 		a {
+			padding: 7px;
 			padding-left: 0px;
-			padding-right: 7px;
 		}
+	}
+	
+	form {
+		display: inline-block !important;
+		padding-left: 8px;
+		
+		input.dark {
+			display: inline-block !important;
+			padding-left: 3px;
+			padding-right: 3px;
+			width: 112px;
+			//text-align: center;
+		}
+
 	}
 }
 
@@ -107,6 +125,7 @@ img.penguin {
 	width: 300px;
 	height: 300px;
 }
+
 
 div#container {
 	.text-shadow(lighten(#282828, 10%));
@@ -125,7 +144,7 @@ div#container {
 	overflow: hidden;
 	border-radius: 6px 6px 6px 6px; 
 	.ie-compat();
-	&>:first-child {
+	&>:first-child:not(#subnavigation) {
 		padding-top: 15px;
 		&:not(article):not(#subnavigation) {
 			text-align: center;
@@ -133,6 +152,22 @@ div#container {
 	}
 }
 
+@media only screen and (min-width: 1150px) and (-webkit-max-device-pixel-ratio: 2)  {
+	// wide screens!
+	
+	div#center {
+		&.wide {
+			width: 1125px !important;
+		}
+	}
+	
+	div#container {
+		&.wide {
+			width: 1075px !important;
+		}
+	}
+
+}
 
 @media only screen and (max-height: 768px) and (-webkit-max-device-pixel-ratio: 2)  {
 	// screens smaller than 768px tall.
@@ -151,6 +186,18 @@ div#container {
 		position: relative;
 		top: @headerheight - 105;
 		padding-top: 20px;
+	}
+}
+
+// iPad (retina and non retina)
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px), 
+only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5) {
+
+	div#navigation {
+		&.fixed {
+			position: fixed;
+		}
 	}
 }
 
@@ -182,7 +229,7 @@ div#container {
 		border-radius: 0px 0px 0px 0px;
 		position: fixed;
 		top: 0px;
-		height: @headerheight - 25;
+		height: @headerheight - 22;
 		min-width: 320px;
 		img.logo {
 			position: relative;
@@ -194,22 +241,38 @@ div#container {
 	div#navigation {
 		border-radius: 0px 0px 0px 0px;
 		position: fixed;
-		top: @headerheight - 23;
-		min-width: 300px;
+		top: @headerheight - 19;
+		min-width: 640px;
 		a {
 			padding: 5px;
 			font-size: 1.25em;
 			padding-top: 9px;
 		}
 	}
-	img {
-		max-width: 100% !important;
-	}
+	
 	div#subnavigation {
+		font-size: 0.9em;
+		display: block;
+		top: 4px;
+		height: auto;
+		width: auto;
+		border-radius: 6px; 
+		/*a {
+			position: relative;
+			top: 14px;
+		}*/
 		span#twitter {
 			display: none;
 		}
+		form {
+			display: none;
+		}
 	}
+	
+	img {
+		max-width: 100% !important;
+	}
+
 }
 
 @media screen and (max-device-width: 480px) and (orientation:portrait) {
