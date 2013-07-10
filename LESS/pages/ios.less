@@ -5,7 +5,7 @@
  * See the README.md for more information
  */
 
-div.list {
+div.firmware {
 	width: 211px;
 	display: inline-block;
 	min-height: 150px;
@@ -41,7 +41,7 @@ div.notification, p.notification {
 			text-decoration: underline;
 		}
 	}
-	
+
 	b {
 		color: #fff;
 	}
@@ -54,17 +54,17 @@ div.notification, p.notification {
 		width: auto;
 	}
 	
-	div.list {
+	div.firmware {
 		width: 49%;
 		input {
 			width: 140px;
 		}
 	}
-	body[class="landscape"] div.list {
+
+	body[class="landscape"] div.firmware {
 		width: 33%;
 	}
 }
-
 
 a.button, input#logout, input#cancel, input#done   {
 	display: inline-block;
@@ -79,7 +79,7 @@ a.button, input#logout, input#cancel, input#done   {
 	text-align: center;
 	width: 180px;
 	height: 30px;
-	border-radius: 3px;
+	border-radius: 2px;
 	font-size: 1.2em;
 	margin: 7px;
 	border: #000 solid 1px; 
@@ -93,6 +93,20 @@ a.button, input#logout, input#cancel, input#done   {
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{headergrd2}', endColorstr='@{headergrd1}');
 		.shadow(#000, 0px, 0px, 3px);
 	}
+
+	&.green {
+		.gradient(bottom, #006600, 5%, #00CC00, 64%, #00CC00, 77%);
+		&:hover {
+			.gradient(top, #006600, 5%, #00CC00, 64%, #00CC00, 77%);
+		}
+	}
+	&.red {
+		.gradient(bottom, lighten(#b70000, 30%), 5%, lighten(#FF3300, 30%), 64%, lighten(#FF3300, 30%), 77%);
+		&:hover {
+			.gradient(top, lighten(#b70000, 30%), 5%, lighten(#FF3300, 30%), 64%, lighten(#FF3300, 30%), 77%);
+		}
+	}
+
 	.ie-compat();
 }
 
@@ -109,22 +123,31 @@ input.dark {
 	padding-right: 2px;
 }
 
-input.smallbutton {
-	width: auto;
-	height: auto;
-	padding: 2px;
-	padding-left: 4px;
-	padding-right: 4px;
-	font-size: 0.9em;
-	border-radius: 3px 3px 3px 3px;
+.smallbutton {
+	width: 25px !important;
+	padding: 1px !important;
+	padding-top: 0px !important;
+	height: 20px !important;
+	font-size: 0.8em !important;
+	margin-left: 2px !important;
+	position: relative;
+	top: 0px;
+}
+
+#topbox {
+	border-top: 1px dashed #fff;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 #ios-content {
 	text-align: left;
 	border-top: 1px dashed #fff;
 	border-bottom: 1px dashed #fff;
+	margin-top: 10px;
 	padding-top: 10px;
 	padding-bottom: 12px;
+
 	select {
 		width: 182px;
 		position: relative;
@@ -132,6 +155,7 @@ input.smallbutton {
 		margin-right: auto;
 		display: block;
 	}
+
 	h3 a {
 		color: white;
 		&:hover {
@@ -147,60 +171,102 @@ input.smallbutton {
 	text-decoration: none;
 	text-align: center;	
 	color: #000;
-	.text-shadow(#fff); 
-	width: 162px;
-	height: 30px;
-	border-radius: 3px 0px 0px 3px;
+	.text-shadow(#fff);
+	
+	width: 158px;
+	border-radius: 2px 0px 0px 2px;
 	position: relative;
 	display: inline-block;
-	left: 0px;
-	border: #000 solid 1px; 
-	margin-top: 12px;
+	border: #000 solid 1px;
+	
+	margin: 0px;
+	margin-right: -3px;
+	margin-top: 11px;
+	margin-left: -2px;
+	
+	
 	padding-top: 3px;
-	padding-bottom: 2px;
+	padding-bottom: 3px;
 	.shadow(#000, 0px, 0px, 2px);
 	cursor: pointer;
-	/* -webkit-transition-property: linear-gradient, -o-linear-gradient, -moz-linear-gradient, -webkit-linear-gradient, -ms-linear-gradient;
-	-webkit-transition-duration: 2s, 2s, 2s, 2s, 2s;
-	-webkit-transition-timing-function: ease-in, ease-in, ease-in, ease-in, ease-in; */
+
+	
 	&:hover {
+		color: #000;
 		.gradient(top, @headergrd1, 5%, @headergrd2, 64%, @headergrd2, 77%);
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{headergrd2}', endColorstr='@{headergrd1}');
 		.shadow(#000, 0px, 0px, 3px);
 	}
+	
 	.ie-compat();
+	
 	// the info button too!
 	&.info {
-		border-radius: 0px 3px 3px 0px;
-		font-family: "Times New Roman", Times, serif;
+		border-radius: 0px 2px 2px 0px;
 		background: rgb(0,0,0);
-		background-repeat: repeat-x;
+		
 		.gradient(bottom, @darkgrd1, 19%, @darkgrd2, 60%, @darkgrd2, 0%);
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{darkgrd2}', endColorstr='@{darkgrd1}');
 		display: inline-block;
+		
 		width: 22px;
+		height: 19px;
+		
 		vertical-align: top;
 		text-decoration: none;
 		font-style: italic;
+		
 		text-shadow: none;
-		padding-top: 3px;
+		padding-top: 6px;
 		padding-bottom: 3px;
-		font-size: 1.2em;
+		font-size: 0.94em;
 		color: #fff;
+		
 		&:hover {
 			.gradient(top, @darkgrd1, 19%, @darkgrd2, 60%, @darkgrd2, 0%);
 			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{darkgrd2}', endColorstr='@{darkgrd1}');
 		}
 	}
+
 	&.error {
 		font-size: 1.15em;
 		.gradient(bottom, rgb(243,82,46), 45%, rgb(255,115,74), 73%, darken(rgb(255,150,104), 5%), 87%);
 		&:hover {
 			.gradient(top, rgb(243,82,46), 45%, rgb(255,115,74), 73%, darken(rgb(255,150,104), 5%), 87%);
 		}
+		padding-top: 4px;
+		padding-bottom: 4px;
 	}
+
+	&.green {
+		font-size: 1.15em;
+		cursor: default;
+		.gradient(top, rgb(201,222,150), 2%, rgb(138,182,107), 43%, rgb(57,130,53), 98%);
+		/*&:hover {
+			.gradient(top, rgb(0,255,0), 45%, rgb(0,238,0), 73%, rgb(0,128,0), 87%);
+		}*/
+		position: relative;
+		top: -1px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	&.red {
+		font-size: 1.15em;
+		cursor: default;
+		//.gradient(top, rgb(201,222,150), 2%, rgb(138,182,107), 43%, rgb(57,130,53), 98%);
+		.gradient(bottom, rgb(243,82,46), 45%, rgb(255,115,74), 73%, darken(rgb(255,150,104), 5%), 87%);
+		/*&:hover {
+			.gradient(top, rgb(0,255,0), 45%, rgb(0,238,0), 73%, rgb(0,128,0), 87%);
+		}*/
+		position: relative;
+		top: -1px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
 	&.processing {
-		.gradient(bottom, rgb(55,133,158), 3%, rgb(83,160,190), 61%, rgb(83,160,190), 61%);
+		.gradient(top, rgb(55,133,158), 3%, rgb(83,160,190), 61%, rgb(83,160,190), 61%);
 		&:hover {
 			.gradient(top, rgb(55,133,158), 3%, rgb(83,160,190), 61%, rgb(83,160,190), 61%);
 		}
@@ -212,7 +278,7 @@ input.smallbutton {
 	// fix odd alignment of buttons
 	.ios-button {
 		padding-bottom: 3px;
-		padding-top: 1px;
+		padding-top: 3px;
 	}
 }
 
@@ -264,8 +330,10 @@ div#updatesbox {
 		li {
 			padding-bottom: 10px;
 			padding-top: 10px;
-			padding-left: 5px;
+			padding-left: 3px;
+
 			border-bottom: 1px dashed #fff;
+			list-style-type: none;
 		}
 	}
 	
@@ -294,7 +362,7 @@ div#updatesbox {
 		padding-left: 2px;
 		display: inline-block;
 		position: relative;
-		margin-top: -5px;
+		margin-top: -6px;
 		border-radius: 0px 2px 2px 0px;	
 	}
 	
@@ -306,6 +374,7 @@ div#updatesbox {
 			border-bottom: none;
 			padding: 2px;
 			color: white;
+			list-style-type: square;
 			i {
 				color: yellow;
 			}
@@ -318,16 +387,24 @@ div#updatesbox {
 		font-size: 0.8em;
 		padding-left: 20px;
 		margin: 1px; 
+		padding-right: 5px;
+	}
+
+	&.productpage {
+		// itunes specifics:
+		width: auto;
+		float: left;
+		padding: 20px;
+		padding-top: 0px;
+		ul.updates {
+			width: 400px;
+			height: 200px;
+			margin-top: 1px;
+			float: left;
+		}
 	}
 
 }
-
-@media only screen and (min-width: 1150px) and (-webkit-max-device-pixel-ratio: 2)  {
-	div#updatesbox {
-		width: 400px;
-	}
-}
-
 
 
 // iPad (retina and non retina)
@@ -337,7 +414,9 @@ only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-w
 
 	#ios-content {
 		select {
-			width: 201px;
+			position: relative;
+			left: 1px;
+			width: 186px;
 		}
 	}
 	.ios-button {
@@ -410,13 +489,6 @@ div#info {
 }
 
 
-@media only screen and (min-width: 1150px) and (-webkit-max-device-pixel-ratio: 2)  {
-	// wide screens!
-	div#info {
-		width: 635px;
-	}
-}
-
 @media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-device-width: 480px) {
 
 	div#info {
@@ -439,4 +511,10 @@ div#info {
 span#field {
 	width: 190px;
 	display: inline-block;
+}
+
+ul#notification {
+	list-style-type: none; 
+	padding-left: 20px; 
+	margin: 0px;
 }

@@ -1,0 +1,147 @@
+/*
+ * Just a Penguin Website by Callum Jones <cj@icj.me>
+ * user.less
+ * Licensed under under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+ * See the README.md for more information
+ */
+
+div#user {
+	float: right;
+	padding-right: 4px;
+	padding-top: 4px;
+	color: #000;
+	height: 32px;
+
+	img#picture {
+		width: 30px;
+		height: 30px;
+		display: inline-block;
+		border: 1px solid #000;
+		background: #fff;
+	}
+
+	div.info {
+		display: inline-block;
+		vertical-align: middle;
+
+		padding-right: 4px;
+		font-size: 0.8em;
+		height: 30px;
+		a {
+			color: #000;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+div#userbox {
+	// fallback image for people using stupid browsers
+	background-image: url("/assets/images/index_bg.png");
+	background-repeat: repeat-x;
+	.gradient(bottom, @headergrd1, 5%, @headergrd2, 64%, @headergrd2, 77%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{headergrd2}', endColorstr='@{headergrd1}');
+	padding: 0;
+	position: relative;
+	.shadow(0px, 0px, 10px, #000);
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 400px; 
+	margin-top: 8%;
+	z-index: 20;
+	behavior: url('/assets/css/pie/PIE.php');
+	border-radius: 2px 2px 2px 2px;
+
+	p.tagline {
+		position: absolute;
+		bottom: 5px;
+		margin-left:-75px;
+		left:50%;
+		font-size: 0.85em;
+		a {
+			color: #000;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	
+	img#picture {
+		width: 100px;
+		height: 100px;
+		display: block;
+		border: 1px solid #000;
+		background: #fff;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		top: 40px;
+	}
+
+	span.error {
+		width: auto;
+		text-align: left;
+		padding: 4px;
+		background: @red;
+		border-radius: 2px 2px 2px 2px;
+		border: 1px dashed #fff;
+		color: #fff;
+		padding-top: 2px !important;
+		padding-bottom: 2px !important;
+		font-size: 0.8em;
+		margin-right: auto;
+		margin-left: auto;
+		display: table;
+		position: relative;
+		top: -35px;
+		z-index: 100;
+	}
+
+	form.login {
+		display: block;
+		width: 200px;
+		position: relative;
+		top: 100px;
+		margin-left: auto;
+		margin-right: auto;
+
+		input.dark {
+			background: #333;
+			&:focus {
+				.shadow(darken(@headergrd1, 20%), 0px, 0px, 5px);
+			}
+		}
+
+		button.loginbutton {
+			width: 92px;
+			font-size: 0.9em;
+			background: #333;
+			padding: 4px;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			border: 1px dashed #fff;
+			position: relative;
+			top: 10px;
+			color: #fff;
+			&:hover {
+				.shadow(darken(@headergrd1, 20%), 0px, 0px, 5px);
+			}
+		}
+
+		label {
+			width: 100px;
+		}
+	}
+}
+
+img.profilepic {
+	width: 200px;
+	height: 200px;
+	float: left;
+	border: 1px solid #000;
+	background: #fff;
+	margin-right: 20px;
+}

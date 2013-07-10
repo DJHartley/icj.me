@@ -16,7 +16,7 @@ div#header {
 	//.shadow(#000, 0px, 0px, 10px);
 	width: 100%;
 	z-index: 20;
-	border-bottom: 2px solid #000;
+	border-bottom: 3px solid #000;
 	// border-radius: 6px 6px 0px 0px;
 	// border-top-right-radius: 6px;
 	// border-top-left-radius: 6px;
@@ -43,7 +43,7 @@ div#navigation {
 	border-bottom: 1px solid #000;
 	width: 100%;
 	position: fixed; 
-	top: @headerheight + 2;
+	top: @headerheight + 3;
 	height: 48px;
 	.text-shadow(#fff);
 	z-index: 5;	
@@ -75,19 +75,19 @@ div#navigation {
 
 div#subnavigation {
 	position: relative;
-	top: -10px;
-	padding-top: 0px !important;
+	top: -9px;
+	padding-top: 3px !important;
 	margin-left: auto;
 	margin-right: auto;
 	
-	height: 40px;
+	height: 39px;
 	width: 95%;
 
 	max-width: @pagewidth - 20;
 	background: rgb(0, 0, 0) transparent; 
 	background: rgba(0, 0, 0, 0.6); 
 	// .shadow(darken(rgba(0, 0, 0, 0.6), 3%), 0px, 0px, 4px);
-	border-radius: 0px 0px 6px 6px;
+	border-radius: 0px 0px 2px 2px;
 	text-align: center;
 
 	a {
@@ -98,7 +98,9 @@ div#subnavigation {
 	}
 	span#twitter {
 		float: right;
-		padding-top: 14px;
+		padding-top: 11px;
+		position: relative;
+		left: -20px;
 		a {
 			padding: 7px;
 			padding-left: 0px;
@@ -142,7 +144,7 @@ div#container {
 	margin-left: auto;
 	margin-right: auto;
 	overflow: hidden;
-	border-radius: 6px 6px 6px 6px; 
+	border-radius: 2px 2px 2px 2px; 
 	.ie-compat();
 	&>:first-child:not(#subnavigation) {
 		padding-top: 15px;
@@ -152,22 +154,6 @@ div#container {
 	}
 }
 
-@media only screen and (min-width: 1150px) and (-webkit-max-device-pixel-ratio: 2)  {
-	// wide screens!
-	
-	div#center {
-		&.wide {
-			width: 1125px !important;
-		}
-	}
-	
-	div#container {
-		&.wide {
-			width: 1075px !important;
-		}
-	}
-
-}
 
 @media only screen and (max-height: 768px) and (-webkit-max-device-pixel-ratio: 2)  {
 	// screens smaller than 768px tall.
@@ -193,20 +179,27 @@ div#container {
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px), 
 only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5) {
+	div#header {
+		position: fixed;
+	}
 
 	div#navigation {
-		&.fixed {
-			position: fixed;
-		}
+		position: fixed;
+		top: @headerheight + 2;
+	}
+	
+	div#container {
+		position: relative;
+		top: @headerheight + 35;
 	}
 }
 
-
 @media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-device-width: 480px) {
+
 	// iPhone / iPod Touch styles
 	body {
 		margin: 0px;
-		min-height:540px;
+		min-height: 540px;
 	}
 	
 	// min-heights for autopush to remove safari navbar :)
@@ -214,7 +207,7 @@ only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-w
 	body[class="landscape"] { min-height: 400px; }
 	div#container {
 		position: relative;
-		top: @headerheight + 15;
+		top: @headerheight - 5;
 		padding: 15px;
 		width: auto;
 		margin-right: 8px;
@@ -249,14 +242,15 @@ only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-w
 			padding-top: 9px;
 		}
 	}
-	
 	div#subnavigation {
-		font-size: 0.9em;
+		font-size: 1.2em;
 		display: block;
 		top: 4px;
+		padding-top: 5px;
+		padding-bottom: 5px;
 		height: auto;
 		width: auto;
-		border-radius: 6px; 
+		border-radius: 2px; 
 		/*a {
 			position: relative;
 			top: 14px;
@@ -280,6 +274,7 @@ only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-w
 		padding-top: 10px;
 	}
 }
+
 /*
 div#certs {
 	float: right;
@@ -293,21 +288,6 @@ div#certs {
 	}
 }
 */
-
-div#footer {
-	clear: both;
-	top: 130px;
-	position: relative;
-	bottom: 0px;
-	color: white;
-	text-align: center;
-	font-size: 0.82em;
-	height: 50px;
-	a {
-		padding-left: 5px;
-		padding-right: 5px;
-	}
-}
 
 @media only screen and (max-height: 768px) and (-webkit-max-device-pixel-ratio: 2)  {
 	// screens smaller than 768px tall.
@@ -335,15 +315,71 @@ div#footer {
 	}
 }
 
-div#iebanner {
+
+div.notice {
 	position: fixed;
 	padding-top: 5px;
+	.shadow(0px, 0px, 5px, #000);
 	padding-bottom: 5px;
-	top: 0px;
+	top: 4px;
+	left: 4px;
 	z-index: 100;
-	width: 100%;
-	text-align: center;
-	background-color: #000;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-radius: 2px;
+	border: 2px dashed darken(#fff, 40%);
+	margin-left: auto;
+	margin-right: auto;
+	width: 300px;
+	background: #333;
 	color: #fff;
 }
+
+div.half {
+	width: 50%; 
+	display: inline-block; 
+	vertical-align: top;
+
+}
+
+div#footer {
+	clear: both;
+	top: 140px;
+	position: relative;
+	bottom: 0px;
+	color: white;
+	text-align: center;
+	font-size: 0.82em;
+	height: 100px;
+	width: 860px;
+	margin-left: auto;
+	margin-right: auto;
+	a {
+		display: block;
+		padding-bottom: 2px;
+	}
+	h3 {
+		font-size: 1em;
+		font-weight: bold;
+	}
+
+	div.col3 {
+		display: inline-block;
+		width: 33%;
+		padding: 0px;
+	}
+	div.col4 {
+		display: inline-block;
+		width: 25%;
+		text-align: left;
+		vertical-align: top;
+	}
+	div.col5 {
+		display: inline-block;
+		width: 20%;
+		text-align: left;
+		vertical-align: top;
+	}
+}
+
 

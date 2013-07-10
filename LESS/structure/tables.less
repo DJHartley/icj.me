@@ -16,7 +16,7 @@ table {
 		text-align: center;
 		vertical-align: top;
 	}
-	#itunes {
+	&#itunes {
 		margin-top: 10px;
 		border-collapse: collapse;
 		td {
@@ -30,6 +30,18 @@ table {
 				background: rgba(150, 150, 150, 0.6);
 			}
 		}
+
+		tr td:first-child {
+			//font-weight: bold;
+			background: rgb(0, 0, 0) transparent; 
+			background: rgba(0, 0, 0, 0.6);
+			border-top: 1px dashed #fff;
+		}
+
+		tr td {
+			border-top: 1px dashed #fff;
+		}
+
 		th {
 			border-left: 1px dashed #fff;
 			background: rgb(0, 0, 0) transparent; 
@@ -47,6 +59,25 @@ table {
 		}
 	}
 	
+
+	&#notifications {
+		border-collapse: collapse;
+		margin-top: 10px;
+		margin-left: 20px;
+		margin-right: 20px;
+		td {
+			text-align: left;
+			width: auto !important;
+			padding: 2px;
+			padding-right: 6px;
+		}
+
+		tr td:first-child {
+			text-align: center !important;
+		}
+		width: auto;
+	}
+
 	// by version table
 	&.firmwares {
 		margin-top: 10px;
@@ -74,6 +105,11 @@ table {
 			&:last-child {
 				border-top-right-radius: 4px;
 			}
+			&.hashes {
+				@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-device-width: 480px) {
+					display: none;
+				}
+			}
 		}
 		
 		tr {
@@ -87,6 +123,32 @@ table {
 		td {
 			border: 1px solid #fff;
 			vertical-align: middle;
+			&.hashes {
+				code {
+					font-size: 0.55em;
+					// and for the wider screens...
+					@media only screen and (min-width: 1150px) and (-webkit-max-device-pixel-ratio: 2)  {
+						font-size: 0.8em;
+					}
+				}
+				@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-device-width: 480px) {
+					display: none;
+				}
+			}
+
+			&.image {
+				max-width: 150px;
+			}
+			&.key {
+				font-family:Lucida Console, monospace;
+				font-size: 0.8em;
+			}
+
+			&.download {
+				@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-device-width: 480px) {
+					font-size: 0.8em;
+				}
+			}
 		}
 	}
 }
